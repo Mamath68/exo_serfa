@@ -1,10 +1,10 @@
-print("BIENVENUE AU JEU DU PENDU")
-
+from liste_mots import mots
 import random
 import string
-from liste_mots import mots
 
 # print(mots)
+
+print("BIENVENUE AU JEU DU PENDU")
 
 
 def choix_mot_valide(mots):
@@ -38,6 +38,8 @@ if lettre_user in alphabet:
         vies = vies - 1
         print("Cette lettre n'est pas dans le mot. Vous perdez 1 vie")
         print("Il vous reste", vies, "vies")
+elif lettre_user in lettres_mot:
+    print("Cette lettre a déja été renseigné. veuillez réesayer")
 else:
     print(
         "Ce caractère n'est pas une lettre de l'alphabet. veuillez renseigner une lettre"
