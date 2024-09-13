@@ -30,7 +30,7 @@ print("Le mot recherché est : ", " ".join(mot_cherche))
 
 lettre_user = input("Saisissez une lettre svp :").upper()
 
-if lettre_user in alphabet:
+if lettre_user in alphabet - lettres_util:
     lettres_util.add(lettre_user)
     if lettre_user in lettres_mot:
         lettres_mot.remove(lettre_user)
